@@ -1,0 +1,203 @@
+Exercise - 8
+Github link - https://github.com/jahnavi-karanam/git-init-Exercise-8
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python (main)
+$ git clone https://github.com/jahnavi-karanam/git-init-Exercise-8.git
+Cloning into 'git-init-Exercise-8'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python (main)
+$ cd git-init-Exercise-8
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ cat > index.html
+a=4
+b=10
+c=9
+z=a+b+c
+Print ("sum of a,b and c =",z)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git commit -m "Code for Sum"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git log --oneline
+f598608 (HEAD -> main, origin/main, origin/HEAD) Initial commit
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git branch
+* main
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git commit
+[main b7f34ad] Added a sum file
+ 1 file changed, 5 insertions(+)
+ create mode 100644 index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git checkout -b my-feature
+Switched to a new branch 'my-feature'
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git branch
+  main
+* my-feature
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ cat > about-us.html
+This is a new branch in the repository
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git add about-us.html
+warning: LF will be replaced by CRLF in about-us.html.
+The file will have its original line endings in your working directory
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git commit -m "file has been added in the branch"
+[my-feature cd556e6] file has been added in the branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 about-us.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git status
+On branch my-feature
+nothing to commit, working tree clean
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ ls
+README.md  about-us.html  index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ vi index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git commit -m "added a new line in file"
+[main 53aeff1] added a new line in file
+ 1 file changed, 1 insertion(+)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git checkout my-feature
+Switched to branch 'my-feature'
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ ls
+README.md  about-us.html  index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git log --oneline
+53aeff1 (HEAD -> main) added a new line in file
+b7f34ad Added a sum file
+f598608 (origin/main, origin/HEAD) Initial commit
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (main)
+$ git checkout my-feature
+Switched to branch 'my-feature'
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git log --oneline
+cd556e6 (HEAD -> my-feature) file has been added in the branch
+b7f34ad Added a sum file
+f598608 (origin/main, origin/HEAD) Initial commit
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ cat about-us.html
+This is a new branch in the repository
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git push
+fatal: The current branch my-feature has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin my-feature
+
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-init-Exercise-8 (my-feature)
+$ git push --set-upstream origin my-feature
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 604 bytes | 604.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'my-feature' on GitHub by visiting:
+remote:      https://github.com/jahnavi-karanam/git-init-Exercise-8/pull/new/my-feature
+remote:
+To https://github.com/jahnavi-karanam/git-init-Exercise-8.git
+ * [new branch]      my-feature -> my-feature
+Branch 'my-feature' set up to track remote branch 'my-feature' from 'origin'.
+
